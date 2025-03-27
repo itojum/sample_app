@@ -17,12 +17,11 @@ textarea {
 
 .center {
   text-align: center;
-}
 
-.center h1 {
-  margin-bottom: 10px;
+  h1 {
+    margin-bottom: 10px;
+  }
 }
-
 /* footer */
 
 footer {
@@ -30,30 +29,27 @@ footer {
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #777;
-}
 
-footer a {
-  color: #555;
-}
+  a {
+    color: #555;
+    &:hover {
+      color: #222;
+    }
+  }
 
-footer a:hover {
-  color: #222;
-}
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
 
-footer small {
-  float: left;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
 }
-
-footer ul {
-  float: right;
-  list-style: none;
-}
-
-footer ul li {
-  float: left;
-  margin-left: 15px;
-}
-
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -92,9 +88,9 @@ p {
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
-}
 
-#logo:hover {
-  color: #fff;
-  text-decoration: none;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
 }
