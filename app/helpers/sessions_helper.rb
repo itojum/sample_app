@@ -15,4 +15,10 @@ module SessionsHelper
   def logged_in?
     !current_user.nil?
   end
+
+  # ユーザーのログイン情報を破棄する
+  def log_out
+    reset_session
+    @current_user = nil
+  end
 end
