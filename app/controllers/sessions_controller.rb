@@ -6,7 +6,13 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
       reset_session # ログインの直前に必ず呼び出す
-      remember user
+      
+      if(params[:session][:remember_me] == "1")
+        remember user
+      else
+        forget user
+      end
+      
       log_in user
       redirect_to user
     else
