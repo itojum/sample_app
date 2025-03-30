@@ -51,6 +51,7 @@ class UsersController < ApplicationController
       end
     end
     
+    # ユーザーの編集・更新・削除を行う前に正しいユーザーか確認
     def correct_user
       @user = User.find(params[:id])
       redirect_to(root_url, status: :see_other) unless current_user?(@user)
