@@ -3,7 +3,8 @@ User.create!(
   name: "itojum",
   email: "itojum1230@gmail.com",
   password: "fugafuga",
-  password_confirmation: "fugafuga"
+  password_confirmation: "fugafuga",
+  admin: true
 )
 
 # 追加のユーザーをまとめて生成する
