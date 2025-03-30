@@ -43,4 +43,15 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     assert_equal name, @user.name
     assert_equal email, @user.email
   end
+
+  # friendly forwardingが初回のみであることを確認する
+  test "friendly forwarding only once" do
+    get edit_user_path(@user)
+    log_in_as(@user)
+    assert_redirected_to edit_user_url(@user)
+    delete logout_path
+    assert_redirected_to root_url
+    log_in_as(@user)
+    assert_redirected_to user_path(@user)
+  end
 end
