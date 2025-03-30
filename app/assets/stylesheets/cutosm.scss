@@ -227,3 +227,7 @@ input {
     border-bottom: 1px solid $gray-medium-light;
   }
 }
+.page-nav {
+  display: flex;
+  justify-content: center;
+}
