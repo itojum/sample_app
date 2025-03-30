@@ -29,6 +29,10 @@ module SessionsHelper
     end
   end
 
+  def current_user?(user)
+    user && user == current_user
+  end
+
   # 現在のユーザーがログインしているかどうかを返す
   def logged_in?
     !current_user.nil?
@@ -47,4 +51,5 @@ module SessionsHelper
     reset_session
     @current_user = nil
   end
+  
 end
